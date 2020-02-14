@@ -45,6 +45,7 @@
         ]
       }
     ],
+    "react/destructuring-assignment": [0, "never"],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "no-console": "off",

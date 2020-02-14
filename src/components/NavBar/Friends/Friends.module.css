@@ -1,0 +1,4 @@
+.friendsWrapper {
+    display: grid;
+    grid-template-areas: "header header" "nav profile";
+}

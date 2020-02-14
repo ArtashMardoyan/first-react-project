@@ -1,31 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="acc27bc3-5edf-4532-a4e6-82e653d599c5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../first-react-project/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../first-react-project/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../first-react-project/.idea/my-app.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../first-react-project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../first-react-project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../first-react-project/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../first-react-project/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../first-react-project/src/components/Dialogs/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../first-react-project/src/components/Dialogs/Dialogs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../first-react-project/src/components/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../first-react-project/src/components/Profile/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../first-react-project/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../first-react-project/src/index.js" afterDir="false" />
+    <list default="true" id="805c03cc-6f9c-42b5-a01a-fbcee9479efb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/artash.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NavBar/NavBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar/NavBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reduxe/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reduxe/state.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JavaScript File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../first-react-project" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1WhcYwqbCULcHDOq53xmCcG9dQJ" />
+  <component name="ProjectId" id="1XewcAKA1Lg4K6cBq1M9SUSd3zB" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -34,107 +33,58 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/reduxe" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.standard" value="project" />
-    <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/../first-react-project/node_modules/eslint" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
-    <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components/Dialogs/Message" />
-      <recent name="$PROJECT_DIR$/src/components/Dialogs/DialogItem" />
-      <recent name="$PROJECT_DIR$/src/components/Profile/MyPosts/Post" />
-      <recent name="$PROJECT_DIR$/src/components/Profile/MyPosts" />
-      <recent name="$PROJECT_DIR$/src/components/Profile/ProfileInfo" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/components" />
-      <recent name="$PROJECT_DIR$/src/components/Dialogs" />
-      <recent name="$PROJECT_DIR$/src/components/App" />
-      <recent name="$PROJECT_DIR$/src/components/Profile/MyPosts" />
     </key>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/reduxe" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="acc27bc3-5edf-4532-a4e6-82e653d599c5" name="Default Changelist" comment="" />
-      <created>1579605317795</created>
+      <changelist id="805c03cc-6f9c-42b5-a01a-fbcee9479efb" name="Default Changelist" comment="" />
+      <created>1581419944728</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1579605317795</updated>
-      <workItem from="1579605320731" duration="3274000" />
-      <workItem from="1579678610893" duration="32236000" />
-      <workItem from="1580121439736" duration="24000" />
-      <workItem from="1580121536472" duration="1957000" />
-      <workItem from="1580382250446" duration="1156000" />
-      <workItem from="1580739860444" duration="3755000" />
+      <updated>1581419944728</updated>
+      <workItem from="1581419949382" duration="16600000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <ignored-roots>
-      <path value="$PROJECT_DIR$" />
-    </ignored-roots>
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/node_modules/wait-for-expect/lib/waitForExpect.spec.d 2.js" />
+        <option value="$PROJECT_DIR$/node_modules/wait-for-expect/lib/index.d 2.js" />
+        <option value="$PROJECT_DIR$/node_modules/wait-for-expect/lib/toBeInRangeMatcher.d 2.js" />
+      </list>
+    </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="320" y="115" key="#ESLint" timestamp="1580740312926">
+    <state x="229" y="89" key="SettingsEditor" timestamp="1581419982572">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="115" key="#ESLint/0.0.1440.900@0.0.1440.900" timestamp="1580740312926" />
-    <state x="320" y="115" key="#Inspections" timestamp="1580740692842">
+    <state x="229" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1581419982572" />
+    <state x="400" y="207" width="639" height="486" key="find.popup" timestamp="1581514407235">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="115" key="#Inspections/0.0.1440.900@0.0.1440.900" timestamp="1580740692842" />
-    <state x="469" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580113337362">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="469" y="260" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1580113337362" />
-    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1579853489485">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1579853489485" />
-    <state x="229" y="89" key="SettingsEditor" timestamp="1580814715324">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="229" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1580814715324" />
-    <state x="100" y="84" width="1240" height="768" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1580121740982">
-      <screen x="0" y="23" width="1440" height="821" />
-    </state>
-    <state x="100" y="84" width="1240" height="768" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1440.821@0.23.1440.821" timestamp="1580121740982" />
-    <state x="400" y="212" width="639" height="486" key="find.popup" timestamp="1580123165795">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="400" y="212" width="639" height="486" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1580123165795" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1580121951414">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1580121951414" />
+    <state x="400" y="207" width="639" height="486" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1581514407235" />
   </component>
 </project>

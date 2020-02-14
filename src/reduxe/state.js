@@ -1,3 +1,5 @@
+let rerenderEntireTree = () => {};
+
 const state = {
     profilePage: {
         posts: [
@@ -6,7 +8,8 @@ const state = {
             { id: 3, text: 'Quos laborum ut consequuntur voluptas aut cum consectetur eius doloribus.', likesCount: 2 },
             { id: 4, text: 'Quis quia fugit vitae sit.', likesCount: 13 },
             { id: 5, text: 'Recusandae ea magnam ea deleniti.', likesCount: 25 }
-        ]
+        ],
+        newPostText: 'IT-KAMASUTRA.com'
     },
     dialogsPage: {
         dialogs: [
@@ -22,6 +25,33 @@ const state = {
             { id: 4, text: 'Nice thank you.' }
         ]
     }
+};
+
+export const actionCreatePost = () => {
+    const newPost = { id: 5, text: state.profilePage.newPostText, likesCount: 0 };
+
+    state.profilePage.posts.push(newPost);
+    state.profilePage.newPostText = '';
+
+    rerenderEntireTree(state);
+};
+
+export const actionCreateMessage = text => {
+    const newPost = { id: 5, text };
+
+    state.dialogsPage.messages.push(newPost);
+
+    rerenderEntireTree(state);
+};
+
+export const actionChangeNewPostText = text => {
+    state.profilePage.newPostText = text;
+
+    rerenderEntireTree(state);
+};
+
+export const subscribe = observer => {
+    rerenderEntireTree = observer;
 };
 
 export default state;
