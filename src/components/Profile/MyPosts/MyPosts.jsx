@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { updateNewPostTextActionCreator, createPostActionCreator } from '../../../reduxe/state';
 import styles from './MyPosts.module.css';
 import Post from './Post';
 
@@ -10,15 +11,11 @@ const MyPosts = props => {
     const newPostElement = React.createRef();
 
     const addPost = () => {
-        const action = { type: 'ACTION_CREATE_POST' };
-
-        props.dispatch(action);
+        props.dispatch(createPostActionCreator());
     };
 
     const onPostChange = () => {
-        const action = { type: 'ACTION_UPDATE_NEW_POST_TEXT', text: newPostElement.current.value };
-
-        props.dispatch(action);
+        props.dispatch(updateNewPostTextActionCreator(newPostElement.current.value));
     };
 
     return (

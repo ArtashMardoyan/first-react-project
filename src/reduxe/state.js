@@ -1,3 +1,7 @@
+const ACTION_CREATE_POST = 'ACTION_CREATE_POST';
+const ACTION_CREATE_MESSAGE = 'ACTION_CREATE_MESSAGE';
+const ACTION_UPDATE_NEW_POST_TEXT = 'ACTION_UPDATE_NEW_POST_TEXT';
+
 const store = {
     _state: {
         profilePage: {
@@ -57,11 +61,11 @@ const store = {
     },
     // PUBLIC METHODS
     dispatch(action) {
-        if (action.type === 'ACTION_CREATE_POST') {
+        if (action.type === ACTION_CREATE_POST) {
             this._actionCreatePost(action);
-        } else if (action.type === 'ACTION_UPDATE_NEW_POST_TEXT') {
+        } else if (action.type === ACTION_UPDATE_NEW_POST_TEXT) {
             this._actionUpdateNewPostText(action);
-        } else if (action.type === 'ACTION_CREATE_MESSAGE') {
+        } else if (action.type === ACTION_CREATE_MESSAGE) {
             this._actionCreateMessage(action);
         }
     }
@@ -69,3 +73,6 @@ const store = {
 
 export default store;
 window.store = store;
+
+export const createPostActionCreator = () => ({ type: ACTION_CREATE_POST });
+export const updateNewPostTextActionCreator = text => ({ type: ACTION_UPDATE_NEW_POST_TEXT, text });
