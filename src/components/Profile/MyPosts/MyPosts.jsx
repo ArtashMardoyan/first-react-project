@@ -4,18 +4,21 @@ import styles from './MyPosts.module.css';
 import Post from './Post';
 
 const MyPosts = props => {
-    const { posts, newPostText, actionCreatePost, actionChangeNewPostText } = props;
+    const { posts, newPostText } = props;
     const postsElements = posts.map(o => <Post id={o.id} key={o.id} text={o.text} likesCount={o.likesCount} />);
 
     const newPostElement = React.createRef();
 
     const addPost = () => {
-        actionCreatePost(newPostElement.current.value);
-        actionChangeNewPostText('');
+        const action = { type: 'ACTION_CREATE_POST' };
+
+        props.dispatch(action);
     };
 
     const onPostChange = () => {
-        actionChangeNewPostText(newPostElement.current.value);
+        const action = { type: 'ACTION_UPDATE_NEW_POST_TEXT', text: newPostElement.current.value };
+
+        props.dispatch(action);
     };
 
     return (

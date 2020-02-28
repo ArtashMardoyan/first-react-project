@@ -6,19 +6,13 @@ import MyPosts from './MyPosts';
 const Profile = props => {
     const {
         profilePage: { posts, newPostText },
-        actionCreatePost,
-        actionChangeNewPostText
+        dispatch
     } = props;
 
     return (
         <div>
             <ProfileInfo />
-            <MyPosts
-                posts={posts}
-                newPostText={newPostText}
-                actionCreatePost={actionCreatePost}
-                actionChangeNewPostText={actionChangeNewPostText}
-            />
+            <MyPosts posts={posts} newPostText={newPostText} dispatch={dispatch} />
         </div>
     );
 };

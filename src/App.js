@@ -13,9 +13,7 @@ import './App.css';
 const App = props => {
     const {
         state: { profilePage, dialogsPage },
-        actionCreatePost,
-        actionCreateMessage,
-        actionChangeNewPostText
+        dispatch
     } = props;
 
     return (
@@ -23,20 +21,8 @@ const App = props => {
             <Header />
             <NavBar />
             <div className="appWrapperContent">
-                <Route
-                    path="/profile"
-                    render={() => (
-                        <Profile
-                            profilePage={profilePage}
-                            actionCreatePost={actionCreatePost}
-                            actionChangeNewPostText={actionChangeNewPostText}
-                        />
-                    )}
-                />
-                <Route
-                    path="/dialogs"
-                    render={() => <Dialogs dialogsPage={dialogsPage} actionCreateMessage={actionCreateMessage} />}
-                />
+                <Route path="/profile" render={() => <Profile profilePage={profilePage} dispatch={dispatch} />} />
+                <Route path="/dialogs" render={() => <Dialogs dialogsPage={dialogsPage} dispatch={dispatch} />} />
                 <Route path="/news" component={News} />
                 <Route path="/music" component={Music} />
                 <Route path="/settings" component={Settings} />

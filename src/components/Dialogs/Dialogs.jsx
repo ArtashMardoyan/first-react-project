@@ -7,7 +7,7 @@ import Message from './Message';
 const Dialogs = props => {
     const {
         dialogsPage: { dialogs, messages },
-        actionCreateMessage
+        dispatch
     } = props;
 
     const dialogsElements = dialogs.map(o => <DialogItem id={o.id} key={o.id} name={o.username} />);
@@ -16,7 +16,7 @@ const Dialogs = props => {
     const newMessageElement = React.createRef();
 
     const addMessage = () => {
-        actionCreateMessage(newMessageElement.current.value);
+        dispatch({ type: 'ACTION_CREATE_MESSAGE', text: newMessageElement.current.value });
         newMessageElement.current.value = '';
     };
 
