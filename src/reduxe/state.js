@@ -1,6 +1,8 @@
 const ACTION_CREATE_POST = 'ACTION_CREATE_POST';
-const ACTION_CREATE_MESSAGE = 'ACTION_CREATE_MESSAGE';
 const ACTION_UPDATE_NEW_POST_TEXT = 'ACTION_UPDATE_NEW_POST_TEXT';
+
+const ACTION_CREATE_MESSAGE = 'ACTION_CREATE_MESSAGE';
+const ACTION_UPDATE_NEW_MESSAGE_BODY = 'ACTION_UPDATE_NEW_MESSAGE_BODY';
 
 const store = {
     _state: {
@@ -26,7 +28,8 @@ const store = {
                 { id: 2, text: 'Hi my friend' },
                 { id: 3, text: 'How are you???' },
                 { id: 4, text: 'Nice thank you.' }
-            ]
+            ],
+            newMessageBody: ''
         }
     },
     getState() {
@@ -36,9 +39,8 @@ const store = {
         this._callSubscriber = observer;
     },
     // PRIVATE METHODS
-    _callSubscriber() {
-        console.log('ok');
-    },
+    _callSubscriber() {},
+    // POST actions
     _actionCreatePost() {
         const newPost = { id: 5, text: this._state.profilePage.newPostText, likesCount: 0 };
 
@@ -52,10 +54,17 @@ const store = {
 
         this._callSubscriber(this._state);
     },
-    _actionCreateMessage(action) {
-        const newPost = { id: 5, text: action.text };
+    // MESSAGE actions
+    _actionCreateMessage() {
+        const newMessage = { id: 5, text: this._state.dialogsPage.newMessageBody };
 
-        this._state.dialogsPage.messages.push(newPost);
+        this._state.dialogsPage.messages.push(newMessage);
+        this._state.dialogsPage.newMessageBody = '';
+
+        this._callSubscriber(this._state);
+    },
+    _actionUpdateNewMessageBody(action) {
+        this._state.dialogsPage.newMessageBody = action.text;
 
         this._callSubscriber(this._state);
     },
@@ -67,6 +76,8 @@ const store = {
             this._actionUpdateNewPostText(action);
         } else if (action.type === ACTION_CREATE_MESSAGE) {
             this._actionCreateMessage(action);
+        } else if (action.type === ACTION_UPDATE_NEW_MESSAGE_BODY) {
+            this._actionUpdateNewMessageBody(action);
         }
     }
 };
@@ -76,3 +87,5 @@ window.store = store;
 
 export const createPostActionCreator = () => ({ type: ACTION_CREATE_POST });
 export const updateNewPostTextActionCreator = text => ({ type: ACTION_UPDATE_NEW_POST_TEXT, text });
+export const createMessageActionCreator = text => ({ type: ACTION_CREATE_MESSAGE, text });
+export const updateMessageBodyActionCreator = text => ({ type: ACTION_UPDATE_NEW_MESSAGE_BODY, text });

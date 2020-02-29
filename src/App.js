@@ -11,18 +11,15 @@ import News from './components/News';
 import './App.css';
 
 const App = props => {
-    const {
-        state: { profilePage, dialogsPage },
-        dispatch
-    } = props;
+    const { profilePage, dialogsPage } = props.state;
 
     return (
         <div className="appWrapper">
             <Header />
             <NavBar />
             <div className="appWrapperContent">
-                <Route path="/profile" render={() => <Profile profilePage={profilePage} dispatch={dispatch} />} />
-                <Route path="/dialogs" render={() => <Dialogs dialogsPage={dialogsPage} dispatch={dispatch} />} />
+                <Route path="/profile" render={() => <Profile profilePage={profilePage} dispatch={props.dispatch} />} />
+                <Route path="/dialogs" render={() => <Dialogs dialogsPage={dialogsPage} dispatch={props.dispatch} />} />
                 <Route path="/news" component={News} />
                 <Route path="/music" component={Music} />
                 <Route path="/settings" component={Settings} />

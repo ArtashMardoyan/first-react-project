@@ -4,15 +4,12 @@ import ProfileInfo from './ProfileInfo';
 import MyPosts from './MyPosts';
 
 const Profile = props => {
-    const {
-        profilePage: { posts, newPostText },
-        dispatch
-    } = props;
+    const { posts, newPostText } = props.profilePage;
 
     return (
         <div>
             <ProfileInfo />
-            <MyPosts posts={posts} newPostText={newPostText} dispatch={dispatch} />
+            <MyPosts posts={posts} newPostText={newPostText} dispatch={props.dispatch} />
         </div>
     );
 };

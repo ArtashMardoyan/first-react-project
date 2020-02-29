@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="805c03cc-6f9c-42b5-a01a-fbcee9479efb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reduxe/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reduxe/state.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +66,7 @@
       <updated>1581419944728</updated>
       <workItem from="1581419949382" duration="16600000" />
       <workItem from="1582110614920" duration="550000" />
-      <workItem from="1582787421631" duration="7872000" />
+      <workItem from="1582787421631" duration="12588000" />
     </task>
     <servers />
   </component>
@@ -86,9 +89,9 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="229" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1581419982572" />
-    <state x="400" y="207" width="639" height="486" key="find.popup" timestamp="1581514407235">
+    <state x="400" y="207" width="639" height="486" key="find.popup" timestamp="1582970574409">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="400" y="207" width="639" height="486" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1581514407235" />
+    <state x="400" y="207" width="639" height="486" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1582970574409" />
   </component>
 </project>

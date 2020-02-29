@@ -1,24 +1,17 @@
 import React from 'react';
 
+import { createMessageActionCreator, updateMessageBodyActionCreator } from '../../reduxe/state';
 import styles from './Dialogs.module.css';
 import DialogItem from './DialogItem';
 import Message from './Message';
 
 const Dialogs = props => {
-    const {
-        dialogsPage: { dialogs, messages },
-        dispatch
-    } = props;
-
+    const { dialogs, messages, newMessageBody } = props.dialogsPage;
     const dialogsElements = dialogs.map(o => <DialogItem id={o.id} key={o.id} name={o.username} />);
     const messagesElements = messages.map(o => <Message id={o.id} key={o.id} text={o.text} />);
 
-    const newMessageElement = React.createRef();
-
-    const addMessage = () => {
-        dispatch({ type: 'ACTION_CREATE_MESSAGE', text: newMessageElement.current.value });
-        newMessageElement.current.value = '';
-    };
+    const addMessage = () => props.dispatch(createMessageActionCreator());
+    const onMessageChange = e => props.dispatch(updateMessageBodyActionCreator(e.target.value));
 
     return (
         <div className={styles.dialogs}>
@@ -26,7 +19,7 @@ const Dialogs = props => {
             <div className={styles.messages}>
                 {messagesElements}
                 <div>
-                    <textarea ref={newMessageElement} name="newPost" id="" cols="100" rows="5" />
+                    <textarea onChange={onMessageChange} value={newMessageBody} placeholder="Enter message" cols="100" rows="5" />
                     <button onClick={addMessage} type="submit">
                         send
                     </button>
