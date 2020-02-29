@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { updateNewPostTextActionCreator, createPostActionCreator } from '../../../reduxe/state';
+import { updateNewPostTextActionCreator, createPostActionCreator } from '../../../reduxe/pofileReducer';
 import styles from './MyPosts.module.css';
 import Post from './Post';
 

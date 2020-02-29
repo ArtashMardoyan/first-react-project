@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { createMessageActionCreator, updateMessageBodyActionCreator } from '../../reduxe/state';
+import { createMessageActionCreator, updateMessageBodyActionCreator } from '../../reduxe/dialogsReducer';
 import styles from './Dialogs.module.css';
 import DialogItem from './DialogItem';
 import Message from './Message';
