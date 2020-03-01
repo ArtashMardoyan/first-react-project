@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
 import * as serviceWorker from './serviceWorker';
-import store from './reduxe/store';
+import store from './reduxe/reduxStore';
 import App from './App';
 
 const rerenderEntireTree = state => {
     ReactDOM.render(
         <BrowserRouter>
-            <App state={state} dispatch={store.dispatch.bind(store)} />
+            <App state={state} dispatch={store.dispatch} />
         </BrowserRouter>,
         document.getElementById('root')
     );
