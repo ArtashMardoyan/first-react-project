@@ -1,15 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 
 import * as serviceWorker from './serviceWorker';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import store from './reduxe/reduxStore';
 import App from './App';
 
 const rerenderEntireTree = () => {
     ReactDOM.render(
         <BrowserRouter>
-            <App store={store} />
+            <Provider store={store}>
+                <App />
+            </Provider>
         </BrowserRouter>,
         document.getElementById('root')
     );

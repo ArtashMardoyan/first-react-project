@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button, Form } from 'react-bootstrap';
 
 import styles from './MyPosts.module.css';
 import Post from './Post';
@@ -12,13 +13,14 @@ const MyPosts = props => {
 
     return (
         <div className={styles.postWrapper}>
-            My Posts
-            <div>
-                <textarea onChange={onPostChange} value={newPostText} name="newPost" cols="100" rows="10" />
-                <button onClick={onCreatePost} type="submit">
-                    send
-                </button>
-            </div>
+            <Form.Group>
+                <Form.Label>My Posts</Form.Label>
+                <Form.Control onChange={onPostChange} value={newPostText} placeholder="Create Post" as="textarea" rows="3" />
+                <br />
+                <Button onClick={onCreatePost} type="submit" variant="primary">
+                    Send
+                </Button>
+            </Form.Group>
             <div>{postsElements}</div>
         </div>
     );

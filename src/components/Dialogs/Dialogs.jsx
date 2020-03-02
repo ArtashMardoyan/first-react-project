@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button, Form } from 'react-bootstrap';
 
 import styles from './Dialogs.module.css';
 import DialogItem from './DialogItem';
@@ -18,12 +19,14 @@ const Dialogs = props => {
             <div className={styles.dialogsItems}>{dialogsElements}</div>
             <div className={styles.messages}>
                 {messagesElements}
-                <div>
-                    <textarea onChange={onMessageChange} value={newMessageBody} placeholder="Enter message" cols="100" rows="5" />
-                    <button onClick={onSendMessageClick} type="submit">
-                        send
-                    </button>
-                </div>
+                <Form.Group>
+                    <Form.Label>My Post</Form.Label>
+                    <Form.Control onChange={onMessageChange} value={newMessageBody} placeholder="Enter message" as="textarea" />
+                    <br />
+                    <Button onClick={onSendMessageClick} type="submit" variant="primary">
+                        Send
+                    </Button>
+                </Form.Group>
             </div>
         </div>
     );

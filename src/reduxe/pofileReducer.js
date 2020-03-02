@@ -2,7 +2,7 @@ const ACTION_CREATE_POST = 'ACTION_CREATE_POST';
 const ACTION_UPDATE_NEW_POST_TEXT = 'ACTION_UPDATE_NEW_POST_TEXT';
 
 const initialState = {
-    newPostText: 'it.com',
+    newPostText: '',
     posts: [
         { id: 1, text: 'Animi omnis accusamus ipsam quia odio et nihil cumque.', likesCount: 10 },
         { id: 2, text: 'Veritatis quia aut eaque ullam.', likesCount: 5 },

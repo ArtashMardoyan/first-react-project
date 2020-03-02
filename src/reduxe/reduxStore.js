@@ -1,6 +1,7 @@
 import { createStore, combineReducers } from 'redux';
-import profileReducer from './pofileReducer';
+
 import dialogsReducer from './dialogsReducer';
+import profileReducer from './pofileReducer';
 
 const reducers = combineReducers({
     profilePage: profileReducer,
