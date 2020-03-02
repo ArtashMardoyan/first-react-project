@@ -1,6 +1,8 @@
-.dialogsItems .active{
-    color: gold;
+.dialog  a{
+    color: white;
+    text-decoration: none;
 }
 
-.dialog {
+.dialog a.active {
+    color: gold;
 }

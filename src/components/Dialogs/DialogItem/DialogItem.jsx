@@ -7,8 +7,10 @@ const DialogItem = props => {
     const { id, name } = props;
 
     return (
-        <div className={`${styles.dialog} ${styles.active}`}>
-            <NavLink to={`/dialogs/${id}`}>{name}</NavLink>
+        <div className={`${styles.dialog}`}>
+            <NavLink to={`/dialogs/${id}`} activeClassName={styles.active}>
+                {name}
+            </NavLink>
         </div>
     );
 };
