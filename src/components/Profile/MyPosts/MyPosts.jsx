@@ -15,7 +15,7 @@ const MyPosts = props => {
         <div className={styles.postWrapper}>
             <Form.Group>
                 <Form.Label>My Posts</Form.Label>
-                <Form.Control onChange={onPostChange} value={newPostText} placeholder="Create Post" as="textarea" rows="3" />
+                <Form.Control onChange={onPostChange} value={newPostText} placeholder="Create Post" as="textarea" />
                 <br />
                 <Button onClick={onCreatePost} type="submit" variant="primary">
                     Send

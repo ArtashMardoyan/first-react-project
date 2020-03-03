@@ -20,7 +20,6 @@ const Dialogs = props => {
             <div className={styles.messages}>
                 {messagesElements}
                 <Form.Group>
-                    <Form.Label>My Post</Form.Label>
                     <Form.Control onChange={onMessageChange} value={newMessageBody} placeholder="Enter message" as="textarea" />
                     <br />
                     <Button onClick={onSendMessageClick} type="submit" variant="primary">
