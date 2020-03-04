@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import { createMessageActionCreator, updateMessageBodyActionCreator } from '../../redux/dialogsReducer';
+import { createMessageActionCreator, updateMessageBodyActionCreator } from '../../redux/Dialog/dialogsReducer';
 import Dialogs from './Dialogs';
 
 const mapStateToProps = state => ({ dialogsPage: state.dialogsPage });
