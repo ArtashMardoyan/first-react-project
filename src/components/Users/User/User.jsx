@@ -1,10 +1,11 @@
 import React from 'react';
 import { Row, Col, Image, Button } from 'react-bootstrap';
 
+import defaultAvatar from '../../../assets/images/defaultAvatar.png';
 import styles from './User.module.css';
 
 const User = props => {
-    const { id, logo, followed, username, status, location } = props.user;
+    const { id, avatar, firstName, lastName, friendsCount, followType } = props.user;
 
     const onClickUnFollow = () => props.unFollow(id);
     const onClickFollow = () => props.follow(id);
@@ -14,10 +15,10 @@ const User = props => {
             <Row className={styles.user}>
                 <Col md={2}>
                     <div className={styles.avatarWrapper}>
-                        <Image roundedCircle src={logo} className={styles.avatar} alt="avatar" />
+                        <Image roundedCircle src={avatar || defaultAvatar} className={styles.avatar} alt="avatar" />
                     </div>
                     <div className={styles.followButtonWrapper}>
-                        {followed ? (
+                        {followType === 'followed' ? (
                             <Button onClick={onClickUnFollow} type="submit" variant="light">
                                 un follow
                             </Button>
@@ -31,12 +32,14 @@ const User = props => {
                 <Col md={6}>
                     <Row className={styles.userInfo}>
                         <Col md={6}>
-                            <div>{username}</div>
-                            <div>{status}</div>
+                            <div>
+                                {firstName} {lastName}
+                            </div>
+                            <div>Friends {friendsCount}</div>
                         </Col>
                         <Col md={6} className={styles.location}>
-                            <div>{location.city}</div>
-                            <div>{location.country}</div>
+                            <div>location.city</div>
+                            <div>location.country</div>
                         </Col>
                     </Row>
                 </Col>

@@ -4,30 +4,30 @@ const SET_USERS = 'SET_USERS';
 
 const initialState = {
     users: [
-        {
-            id: 1,
-            status: 'Backend Developer',
-            followed: true,
-            username: 'Artash Mardoyan',
-            logo: 'https://www.meme-arsenal.com/memes/36d6c0bca90dd84a2fa69c54fc954a7b.jpg',
-            location: { country: 'Armenia', city: 'Erevan' }
-        },
-        {
-            id: 2,
-            status: 'IOS Developer',
-            followed: false,
-            username: 'Artur Asatryan',
-            logo: 'https://klike.net/uploads/posts/2018-06/1528377425_11.jpg',
-            location: { country: 'Armenia', city: 'Erevan' }
-        },
-        {
-            id: 3,
-            status: 'Backend Developer',
-            followed: false,
-            username: 'Gagik Alixanyan',
-            logo: 'https://klike.net/uploads/posts/2018-06/1528377344_7.jpg',
-            location: { country: 'Armenia', city: 'Erevan' }
-        }
+        // {
+        //     id: 1,
+        //     status: 'Backend Developer',
+        //     followed: true,
+        //     username: 'Artash Mardoyan',
+        //     logo: 'https://www.meme-arsenal.com/memes/36d6c0bca90dd84a2fa69c54fc954a7b.jpg',
+        //     location: { country: 'Armenia', city: 'Erevan' }
+        // },
+        // {
+        //     id: 2,
+        //     status: 'IOS Developer',
+        //     followed: false,
+        //     username: 'Artur Asatryan',
+        //     logo: 'https://klike.net/uploads/posts/2018-06/1528377425_11.jpg',
+        //     location: { country: 'Armenia', city: 'Erevan' }
+        // },
+        // {
+        //     id: 3,
+        //     status: 'Backend Developer',
+        //     followed: false,
+        //     username: 'Gagik Alixanyan',
+        //     logo: 'https://klike.net/uploads/posts/2018-06/1528377344_7.jpg',
+        //     location: { country: 'Armenia', city: 'Erevan' }
+        // }
     ]
 };
 
