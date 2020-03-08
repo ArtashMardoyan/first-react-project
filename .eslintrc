@@ -34,7 +34,8 @@
     "no-underscore-dangle": [0, { "allowAfterThis": true}],
     "import/no-extraneous-dependencies": ["error", {"packageDir": "./"}],
     "react/jsx-filename-extension": [1, {"extensions": [".js", ".jsx"]}],
-    "prettier/prettier": ["error", {"singleQuote": true, "tabWidth": 4, "printWidth": 130}]
+    "prettier/prettier": ["error", {"singleQuote": true, "tabWidth": 4, "printWidth": 130}],
+    "react/jsx-props-no-spreading": [0, {"html": "ignore" , "custom": "ignore" , "explicitSpread": "ignore"}]
   },
   "globals": {
     "Blob": true,

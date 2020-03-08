@@ -1,25 +1,30 @@
 import React from 'react';
 import { Col, Image } from 'react-bootstrap';
 
+import defaultAvatar from '../../../assets/images/defaultAvatar.png';
+import defaultCover from '../../../assets/images/defaultCover.jpg';
 import styles from './ProfileInfo.module.css';
+import Preloader from '../../Preloader';
 
-const ProfileInfo = () => {
+const ProfileInfo = props => {
+    if (!props.user) {
+        return <Preloader />;
+    }
+
+    const { avatar, cover, firstName, lastName } = props.user;
+
     return (
         <div>
-            <Col>
-                <Image
-                    fluid
-                    src="https://www.wonderplugin.com/wp-content/uploads/2019/05/tutorial-city-900x288.jpg"
-                    alt="cover"
-                />
+            <Col className={styles.cover}>
+                <Image fluid src={cover || defaultCover} alt="cover" />
             </Col>
             <Col className={styles.avatar} xs={6} md={4}>
-                <Image
-                    roundedCircle
-                    src="https://s3.amazonaws.com/sabx-backend-dev/seeds/users/gallery/avatars/19.jpeg"
-                    alt="avatar"
-                />
+                <Image roundedCircle src={avatar || defaultAvatar} alt="avatar" />
             </Col>
+            <div>
+                <span>{firstName} </span>
+                <span>{lastName}</span>
+            </div>
         </div>
     );
 };

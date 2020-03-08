@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { Row, Col, Image, Button } from 'react-bootstrap';
 
 import defaultAvatar from '../../../assets/images/defaultAvatar.png';
@@ -14,9 +15,11 @@ const User = props => {
         <div key={id}>
             <Row className={styles.user}>
                 <Col md={2}>
-                    <div className={styles.avatarWrapper}>
-                        <Image roundedCircle src={avatar || defaultAvatar} className={styles.avatar} alt="avatar" />
-                    </div>
+                    <NavLink to={`/profile/${id}`}>
+                        <div className={styles.avatarWrapper}>
+                            <Image roundedCircle src={avatar || defaultAvatar} className={styles.avatar} alt="avatar" />
+                        </div>
+                    </NavLink>
                     <div className={styles.followButtonWrapper}>
                         {followType === 'followed' ? (
                             <Button onClick={onClickUnFollow} type="submit" variant="light">

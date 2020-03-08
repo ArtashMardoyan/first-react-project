@@ -5,14 +5,7 @@ const IS_FETCHING = 'IS_FETCHING';
 const SET_TOTAL_COUNT = 'SET_TOTAL_COUNT';
 const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE';
 
-const initialState = {
-    users: [],
-    page: 1,
-    total: 0,
-    limit: 10,
-    currentPage: 1,
-    isFetching: true
-};
+const initialState = { users: [], page: 1, total: 0, limit: 10, currentPage: 1, isFetching: true };
 
 const usersReducer = (state = initialState, action) => {
     switch (action.type) {
