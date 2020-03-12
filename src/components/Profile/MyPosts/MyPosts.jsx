@@ -5,7 +5,7 @@ import styles from './MyPosts.module.css';
 import Post from './Post';
 
 const MyPosts = props => {
-    const { posts, newPostText } = props.profilePage;
+    const { posts, newPostText } = props.profileReducer;
     const postsElements = posts.map(o => <Post id={o.id} key={o.id} text={o.text} likesCount={o.likesCount} />);
 
     const onCreatePost = () => props.createPost();

@@ -8,7 +8,7 @@ import Users from './Users';
 
 class UsersContainer extends React.Component {
     componentDidMount() {
-        const { currentPage, limit } = this.props.usersPage;
+        const { currentPage, limit } = this.props.usersReducer;
 
         this.props.setIsFetching(true);
 
@@ -20,7 +20,7 @@ class UsersContainer extends React.Component {
     }
 
     onPageChanged = page => {
-        const { limit } = this.props.usersPage;
+        const { limit } = this.props.usersReducer;
 
         this.props.setIsFetching(true);
         this.props.setCurrentPage(page);
@@ -32,8 +32,7 @@ class UsersContainer extends React.Component {
     };
 
     render() {
-        const { users, limit, total, currentPage, isFetching } = this.props.usersPage;
-
+        const { users, limit, total, currentPage, isFetching } = this.props.usersReducer;
         const pageCount = Math.ceil(total / limit);
 
         return (
@@ -44,7 +43,7 @@ class UsersContainer extends React.Component {
                     pageCount={pageCount}
                     currentPage={currentPage}
                     follow={this.props.follow}
-                    unfollow={this.props.unfollow}
+                    unFollow={this.props.unFollow}
                     onPageChanged={this.onPageChanged}
                 />
             </>
@@ -52,7 +51,7 @@ class UsersContainer extends React.Component {
     }
 }
 
-const mapStateToProps = state => ({ usersPage: state.usersPage });
+const mapStateToProps = state => ({ usersReducer: state.usersReducer });
 const mapDispatchToProps = { follow, unFollow, setUsers, setTotalCount, setIsFetching, setCurrentPage };
 
 export default connect(mapStateToProps, mapDispatchToProps)(UsersContainer);

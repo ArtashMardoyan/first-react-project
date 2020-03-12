@@ -3,7 +3,7 @@ import * as axios from 'axios';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
-import { setUserProfile } from '../../redux/Profile/pofileReducer';
+import { setUserProfile } from '../../redux/Profile/profileReducer';
 import Profile from './Profile';
 
 class ProfileContainer extends React.Component {
@@ -21,7 +21,7 @@ class ProfileContainer extends React.Component {
     }
 }
 
-const mapStateToProps = state => ({ profilePage: state.profilePage });
+const mapStateToProps = state => ({ profileReducer: state.profileReducer });
 const mapDispatchToProps = { setUserProfile };
 
 export default connect(mapStateToProps, mapDispatchToProps)(withRouter(ProfileContainer));

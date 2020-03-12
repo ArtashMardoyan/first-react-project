@@ -3,9 +3,9 @@ import { Route } from 'react-router-dom';
 
 import ProfileContainer from './components/Profile';
 import DialogsContainer from './components/Dialogs';
+import HeaderContainer from './components/Header';
 import UsersContainer from './components/Users';
 import Settings from './components/Settings';
-import Header from './components/Header';
 import NavBar from './components/NavBar';
 import Music from './components/Music';
 import News from './components/News';
@@ -14,7 +14,7 @@ import './App.css';
 const App = props => {
     return (
         <div className="appWrapper">
-            <Header />
+            <HeaderContainer />
             <NavBar />
             <div className="appWrapperContent">
                 <Route path="/profile/:userId?" render={() => <ProfileContainer store={props.store} />} />

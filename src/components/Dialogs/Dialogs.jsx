@@ -6,7 +6,7 @@ import DialogItem from './DialogItem';
 import Message from './Message';
 
 const Dialogs = props => {
-    const { dialogs, messages, newMessageBody } = props.dialogsPage;
+    const { dialogs, messages, newMessageBody } = props.dialogsReducer;
 
     const messagesElements = messages.map(o => <Message id={o.id} key={o.id} text={o.text} />);
     const dialogsElements = dialogs.map(o => <DialogItem id={o.id} key={o.id} name={o.username} />);
