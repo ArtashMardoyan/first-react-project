@@ -8,11 +8,15 @@ import Users from './Users';
 
 class UsersContainer extends React.Component {
     componentDidMount() {
+        const headers = {
+            Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzYWx0IjoiRWJKcmVwIiwiaWQiOiJjZjVlZjJlNy1iN2RhLTQxZjktYWY1My02ZWJjMTRhNGUwMDAiLCJpYXQiOjE1ODQwMDkzNDF9.77CDcr7XFwYdtenGrhtSYU0_UEyCRBx2DO04xFe9NbY`
+        };
+
         const { currentPage, limit } = this.props.usersReducer;
 
         this.props.setIsFetching(true);
 
-        axios.get(`http://18.194.159.187:8080/v1/users?page=${currentPage}&limit=${limit}`).then(response => {
+        axios.get(`http://18.194.159.187:8080/v1/users?page=${currentPage}&limit=${limit}`, { headers }).then(response => {
             this.props.setIsFetching(false);
             this.props.setUsers(response.data.users);
             this.props.setTotalCount(response.data._meta.total);
@@ -20,12 +24,16 @@ class UsersContainer extends React.Component {
     }
 
     onPageChanged = page => {
+        const headers = {
+            Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzYWx0IjoiRWJKcmVwIiwiaWQiOiJjZjVlZjJlNy1iN2RhLTQxZjktYWY1My02ZWJjMTRhNGUwMDAiLCJpYXQiOjE1ODQwMDkzNDF9.77CDcr7XFwYdtenGrhtSYU0_UEyCRBx2DO04xFe9NbY`
+        };
+
         const { limit } = this.props.usersReducer;
 
         this.props.setIsFetching(true);
         this.props.setCurrentPage(page);
 
-        axios.get(`http://18.194.159.187:8080/v1/users?page=${page}&limit=${limit}`).then(response => {
+        axios.get(`http://18.194.159.187:8080/v1/users?page=${page}&limit=${limit}`, { headers }).then(response => {
             this.props.setIsFetching(false);
             this.props.setUsers(response.data.users);
         });
