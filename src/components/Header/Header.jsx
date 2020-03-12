@@ -1,26 +1,32 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
-
 import { NavLink } from 'react-router-dom';
+import { Button, Image } from 'react-bootstrap';
+
+import defaultAvatar from '../../assets/images/defaultAvatar.png';
 import styles from './Header.module.css';
 
 const Header = props => {
-    const { isAuth } = props.authReducer.user;
-    console.log(isAuth);
+    const { isAuth, user } = props.authReducer;
 
     return (
         <header className={styles.header}>
-            <img src="https://pngimage.net/wp-content/uploads/2018/06/react-icon-png-1.png" alt="" />
+            <span>
+                <Image roundedCircle src="https://pngimage.net/wp-content/uploads/2018/06/react-icon-png-1.png" alt="logo" />
+            </span>
             {isAuth ? (
-                <div>avatar</div>
+                <span className={styles.authBlock}>
+                    <NavLink to="/profile">
+                        <Image roundedCircle src={user.avatar || defaultAvatar} className={styles.avatar} alt="avatar" />
+                    </NavLink>
+                </span>
             ) : (
-                <div className={styles.loginBlock}>
+                <span className={styles.authBlock}>
                     <NavLink to="/login">
                         <Button type="submit" variant="light">
                             Login
                         </Button>
                     </NavLink>
-                </div>
+                </span>
             )}
         </header>
     );

@@ -7,10 +7,10 @@ const initialState = {
         email: '',
         avatar: '',
         lastName: '',
-        firstName: '',
-        isAuth: false,
-        isFetching: true
-    }
+        firstName: ''
+    },
+    isAuth: false,
+    isFetching: true
 };
 
 const authReducer = (state = initialState, action) => {

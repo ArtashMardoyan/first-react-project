@@ -1,24 +1,18 @@
 import React from 'react';
+import * as axios from 'axios';
 import { connect } from 'react-redux';
 
-import * as axios from 'axios';
 import { setAuthUserData } from '../../redux/Auth/authReducer';
 import Header from './Header';
 
 class HeaderContainer extends React.Component {
     componentDidMount() {
-        const url = 'http://localhost:3066/v1/users/me';
-        const token =
-            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzYWx0IjoiRWJKcmVwIiwiaWQiOiJjZjVlZjJlNy1iN2RhLTQxZjktYWY1My02ZWJjMTRhNGUwMDIiLCJpYXQiOjE1ODM5MTE4MDh9.m6fuaQos5ui7vTGBvZe-Aat4SqkPAwhxEdXERRsbyKY';
-
-        axios
-            .get(url, { withCredentials: true, headers: { Authorization: `Bearer ${token}` } })
-            .then(response => {
-                this.props.setUserData(response.data.user);
-            })
-            .catch(err => {
-                console.log(err);
-            });
+        const headers = {
+            Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzYWx0IjoiRWJKcmVwIiwiaWQiOiJjZjVlZjJlNy1iN2RhLTQxZjktYWY1My02ZWJjMTRhNGUwMDAiLCJpYXQiOjE1ODQwMDkzNDF9.77CDcr7XFwYdtenGrhtSYU0_UEyCRBx2DO04xFe9NbY`
+        };
+        axios.get('http://18.194.159.187:8080/v1/users/me/', { headers }).then(response => {
+            this.props.setAuthUserData(response.data.user);
+        });
     }
 
     render() {
