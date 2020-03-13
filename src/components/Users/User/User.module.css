@@ -11,6 +11,7 @@
 .avatar {
     width: 100px;
     height: 100px;
+    object-fit: cover;
     border: #157af6 solid 3px;
 }
 

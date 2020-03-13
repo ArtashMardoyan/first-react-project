@@ -15,7 +15,16 @@ const Profile = props => {
         );
     }
 
-    const usersElements = users.map(u => <User key={u.id} user={u} follow={props.follow} unFollow={props.unFollow} />);
+    const usersElements = users.map(u => (
+        <User
+            user={u}
+            key={u.id}
+            follow={props.follow}
+            unFollow={props.unFollow}
+            followingProcess={props.followingProcess}
+            toggleFollowProgress={props.toggleFollowProgress}
+        />
+    ));
 
     return (
         <div>

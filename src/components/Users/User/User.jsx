@@ -8,20 +8,29 @@ import styles from './User.module.css';
 
 const User = props => {
     const { id, avatar, firstName, lastName, friendsCount, followType } = props.user;
+    const { followingProcess } = props;
 
     const onClickUnFollow = () => {
+        props.toggleFollowProgress(true, id);
+
         FollowHandler.actionCreate(id).then(data => {
             if (data.statusCode === 202) {
                 props.follow(id);
             }
+
+            props.toggleFollowProgress(false, id);
         });
     };
 
     const onClickFollow = () => {
+        props.toggleFollowProgress(true, id);
+
         FollowHandler.actionDelete(id).then(data => {
             if (data.statusCode === 202) {
                 props.unFollow(id);
             }
+
+            props.toggleFollowProgress(false, id);
         });
     };
 
@@ -36,13 +45,25 @@ const User = props => {
                     </NavLink>
                     <div className={styles.followButtonWrapper}>
                         {followType === 'followed' ? (
-                            <Button onClick={onClickFollow} type="submit" variant="light">
+                            <Button
+                                type="submit"
+                                variant="light"
+                                onClick={onClickFollow}
+                                disabled={followingProcess.some(i => i === id)}
+                            >
                                 un follow
                             </Button>
-                        ) : (
-                            <Button onClick={onClickUnFollow} type="submit" variant="primary">
+                        ) : followType === 'notFollowed' ? (
+                            <Button
+                                type="submit"
+                                variant="primary"
+                                onClick={onClickUnFollow}
+                                disabled={followingProcess.some(i => i === id)}
+                            >
                                 follow
                             </Button>
+                        ) : (
+                            <></>
                         )}
                     </div>
                 </Col>
