@@ -1,3 +1,5 @@
+import UserHandler from '../../api/UserHandler';
+
 const ACTION_CREATE_POST = 'ACTION_CREATE_POST';
 const ACTION_SET_USER_PROFILE = 'ACTION_SET_USER_PROFILE';
 const ACTION_UPDATE_NEW_POST_TEXT = 'ACTION_UPDATE_NEW_POST_TEXT';
@@ -31,3 +33,7 @@ export default profileReducer;
 export const createPost = () => ({ type: ACTION_CREATE_POST });
 export const setUserProfile = user => ({ type: ACTION_SET_USER_PROFILE, user });
 export const updateNewPostText = text => ({ type: ACTION_UPDATE_NEW_POST_TEXT, text });
+
+export const getUserProfile = userId => dispatch => {
+    UserHandler.actionView(userId).then(data => dispatch(setUserProfile(data.user)));
+};

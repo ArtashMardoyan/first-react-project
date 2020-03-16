@@ -3,36 +3,11 @@ import { NavLink } from 'react-router-dom';
 import { Row, Col, Image, Button } from 'react-bootstrap';
 
 import defaultAvatar from '../../../assets/images/defaultAvatar.png';
-import FollowHandler from '../../../api/FollowHandler';
 import styles from './User.module.css';
 
 const User = props => {
     const { id, avatar, firstName, lastName, friendsCount, followType } = props.user;
     const { followingProcess } = props;
-
-    const onClickUnFollow = () => {
-        props.toggleFollowProgress(true, id);
-
-        FollowHandler.actionCreate(id).then(data => {
-            if (data.statusCode === 202) {
-                props.follow(id);
-            }
-
-            props.toggleFollowProgress(false, id);
-        });
-    };
-
-    const onClickFollow = () => {
-        props.toggleFollowProgress(true, id);
-
-        FollowHandler.actionDelete(id).then(data => {
-            if (data.statusCode === 202) {
-                props.unFollow(id);
-            }
-
-            props.toggleFollowProgress(false, id);
-        });
-    };
 
     return (
         <div key={id}>
@@ -48,7 +23,7 @@ const User = props => {
                             <Button
                                 type="submit"
                                 variant="light"
-                                onClick={onClickFollow}
+                                onClick={() => props.unfollow(id)}
                                 disabled={followingProcess.some(i => i === id)}
                             >
                                 un follow
@@ -57,7 +32,7 @@ const User = props => {
                             <Button
                                 type="submit"
                                 variant="primary"
-                                onClick={onClickUnFollow}
+                                onClick={() => props.follow(id)}
                                 disabled={followingProcess.some(i => i === id)}
                             >
                                 follow
