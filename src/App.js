@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom';
 import ProfileContainer from './components/Profile';
 import DialogsContainer from './components/Dialogs';
 import HeaderContainer from './components/Header';
+import LoginContainer from './components/Login';
 import UsersContainer from './components/Users';
 import Settings from './components/Settings';
 import NavBar from './components/NavBar';
@@ -23,6 +24,7 @@ const App = props => {
                 <Route path="/music" render={Music} />
                 <Route path="/settings" render={Settings} />
                 <Route path="/users" render={() => <UsersContainer store={props.store} />} />
+                <Route path="/login" render={() => <LoginContainer store={props.store} />} />
             </div>
         </div>
     );
