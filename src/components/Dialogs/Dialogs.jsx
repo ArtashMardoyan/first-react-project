@@ -1,5 +1,4 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
 import { Button, Form } from 'react-bootstrap';
 
 import styles from './Dialogs.module.css';
@@ -8,8 +7,6 @@ import Message from './Message';
 
 const Dialogs = props => {
     const { dialogs, messages, newMessageBody } = props.dialogsReducer;
-
-    if (!props.isAuth) return <Redirect to="/login" />;
 
     const messagesElements = messages.map(o => <Message id={o.id} key={o.id} text={o.text} />);
     const dialogsElements = dialogs.map(o => <DialogItem id={o.id} key={o.id} name={o.username} />);

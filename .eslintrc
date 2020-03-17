@@ -28,6 +28,7 @@
   "rules": {
     "no-console": "off",
     "react/prop-types": 0,
+    "import/no-named-as-default": 0,
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/destructuring-assignment": [0, "never"],
